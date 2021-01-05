@@ -1,0 +1,45 @@
+[{
+	"name": "Sword",
+	"description": "lovely sharp",
+	"attack": 5.0,
+	"defense": 2.0,
+	"type": "Melee",
+	"stackable": false
+},
+{
+	"name": "Spear",
+	"description": "pointy Sharp",
+	"attack": 4.0,
+	"defense": 10.0,
+	"type": "Melee",
+	"stackable": true
+},
+{
+	"name": "Gun",
+	"description": "shooty shoot",
+	"attack": 2.0,
+	"defense": 5.0,
+	"type": "Range",
+	"stackable": false
+},
+{
+	"name": "Rod",
+	"description": "Expecto Patronum",
+	"attack": 20.0,
+	"defense": 0.0,
+	"type": "Magic",
+	"stackable": true
+}{
+	"name": "Shirt",
+	"description": "Plain white T",
+	"defense": 5.0,
+	"type": "Chest",
+	"stackable": true
+},
+{
+	"name": "Pant",
+	"description": "Cargo",
+	"defense": 5.0,
+	"type": "Bottoms",
+	"stackable": false
+}]
