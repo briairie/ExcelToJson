@@ -1,5 +1,6 @@
 package application.datatier;
 
+import java.io.File;
 import java.io.PrintWriter;
 
 import application.model.Converter;
@@ -12,7 +13,6 @@ import application.model.Converter;
  */
 public class JsonFileWriter {
 
-	private static final String FILE_NAME = "jsonExampleFile.json";
 
 	/**
 	 * Create JSON file from converted string
@@ -21,10 +21,9 @@ public class JsonFileWriter {
 	 * @postconditions none
 	 *
 	 */
-	public void createJsonFile() {
-		try (PrintWriter writer = new PrintWriter(FILE_NAME)) {
-			Converter converter = new Converter();
-			writer.print(converter.convert());
+	public void createJsonFile(File file, String content) {
+		try (PrintWriter writer = new PrintWriter(file)) {
+			writer.print(content);
 		} catch (Exception exc) {
 			exc.printStackTrace();
 		}

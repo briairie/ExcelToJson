@@ -19,7 +19,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  * @version 2020
  */
 public class Converter {
-	private static final String FILE_NAME = "Example.xlsx";
 	private String convertedString = "";
 
 	/**
@@ -30,10 +29,11 @@ public class Converter {
 	 * 
 	 * @return converted string
 	 */
-	public String convert() {
-		try (FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
+	public String convert(File file) {
+		try (FileInputStream excelFile = new FileInputStream(file);
 				Workbook workbook = new XSSFWorkbook(excelFile);) {
 			Iterator<Sheet> sheetIterator = workbook.iterator();
+			this.convertedString = ""; 
 			this.convertedString += "[";
 			while (sheetIterator.hasNext()) {
 				this.printSheet(sheetIterator);
